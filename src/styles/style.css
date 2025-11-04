@@ -1,36 +1,78 @@
+/* --- Layout --- */
 body {
   font-family: 'Noto Sans KR', sans-serif;
   background-color: #faf9f8;
-  color: #333;
+  color: #222;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background: #1a1a1a;
+  background: #111;
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem 0;
 }
-
 nav a {
-  color: #e0e0e0;
-  margin: 0 10px;
+  color: #e5e5e5;
+  margin: 0 12px;
   text-decoration: none;
+  font-weight: 500;
 }
+nav a:hover { color: #b89a72; }
 
-nav a:hover {
-  color: #b89a72;
-}
-
-main {
-  padding: 2rem;
-  text-align: center;
-}
+main { padding: 2rem; max-width: 1000px; margin: auto; }
 
 footer {
-  text-align: center;
+  background: #f2f2f2;
   padding: 1rem;
-  background: #f0f0f0;
+  text-align: center;
+  margin-top: 3rem;
   font-size: 0.9rem;
+  color: #444;
+}
+
+/* --- Gallery --- */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.image-grid img {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.image-grid img:hover { transform: scale(1.05); }
+
+video {
+  display: block;
+  margin: 2rem auto;
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* --- Home Page --- */
+.season-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.season-card {
+  width: 300px;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.season-card:hover { transform: scale(1.03); }
+.season-card img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
