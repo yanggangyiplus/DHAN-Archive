@@ -25,11 +25,8 @@ export default function Header() {
                         <Link href="/2021ART" className="text-sm text-charcoal/80 hover:text-charcoal transition-colors">
                             2021 ART
                         </Link>
-                        <Link href="/inspiration" className="text-sm text-charcoal/80 hover:text-charcoal transition-colors">
-                            Inspiration
-                        </Link>
                         <Link href="/contact" className="text-sm text-charcoal/80 hover:text-charcoal transition-colors">
-                            Contact
+                            Profile
                         </Link>
                     </nav>
                 </div>

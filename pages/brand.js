@@ -45,30 +45,16 @@ export default function Brand() {
           </div>
         </section>
 
-        {/* 브랜드 영상 */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-serif text-charcoal mb-8 text-center">
-            Brand Film
-          </h2>
-          <div className="w-full rounded-lg overflow-hidden bg-beige/30">
-            <video
-              src="/assets/videos/brand/D'Han Video with 오디오.mp4"
-              controls
-              className="w-full"
-            >
-              브라우저가 영상을 지원하지 않습니다.
-            </video>
-          </div>
-        </section>
-
         {/* 비전 */}
         <section className="text-center space-y-4">
           <h2 className="text-2xl font-serif text-charcoal">
             Vision
           </h2>
           <p className="text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-            D'HAN은 "감정이 형태로 번역되는 순간"을 시각화합니다.<br />
-            디지털 기술과 감각적 미학의 융합을 통해, 새로운 패션 언어를 만들어갑니다.
+            D'HAN은 감정이 형태로 번역되는 순간을 시각화합니다.<br />
+            스포츠의 리듬과 움직임 속에서 발견한 정제된 에너지와 우아함의 균형을 탐구하며,<br />
+            디지털 기술과 감각적 미학의 융합을 통해 새로운 패션 언어를 만들어갑니다.<br />
+            감정, 구조, 그리고 속도의 조화를 옷이라는 조형 언어로 표현합니다.
           </p>
         </section>
       </main>

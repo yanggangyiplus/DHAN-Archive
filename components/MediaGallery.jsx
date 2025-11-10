@@ -3,7 +3,8 @@
  */
 export default function MediaGallery({ 
   images = [], 
-  videos = []
+  videos = [],
+  videoThumbnails = []
 }) {
   return (
     <div className="space-y-12 fade-in">
@@ -31,11 +32,12 @@ export default function MediaGallery({
       {videos.length > 0 && (
         <div className="space-y-6">
           {videos.map((src, idx) => (
-            <div key={idx} className="w-full rounded-lg overflow-hidden bg-beige/30">
+            <div key={idx} className="w-full rounded-lg overflow-hidden bg-beige/30 relative aspect-video">
               <video
                 src={src}
                 controls
-                className="w-full"
+                poster={videoThumbnails[idx] || undefined}
+                className="w-full h-full object-cover"
               >
                 브라우저가 영상을 지원하지 않습니다.
               </video>

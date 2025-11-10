@@ -102,6 +102,20 @@ export default function Season() {
             )}
           </div>
         </section>
+
+        {/* BRAND LAUNCHING SHOW (2024 FW만) */}
+        {seasonData.id === '2024FW' && (
+          <section className="mt-16 mb-16">
+            <h2 className="text-2xl font-serif text-charcoal mb-8 text-center">
+              BRAND LAUNCHING SHOW
+            </h2>
+            <MediaGallery
+              images={seasonData.showImages || []}
+              videos={seasonData.showVideos || []}
+              videoThumbnails={seasonData.showVideoThumbnails || []}
+            />
+          </section>
+        )}
       </main>
 
       <Footer />

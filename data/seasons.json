@@ -26,7 +26,14 @@
         "/assets/images/collections/24FW/24FW3-5.jpg",
         "/assets/images/collections/24FW/24FW3-6.jpg"
       ],
-      "videos": []
+      "videos": [],
+      "showImages": [],
+      "showVideos": [
+        "/assets/videos/collections/24FW/V1.mp4"
+      ],
+      "showVideoThumbnails": [
+        "/assets/images/collections/24FW/show-thumbnail.jpg"
+      ]
     },
     {
       "id": "2021ART",
