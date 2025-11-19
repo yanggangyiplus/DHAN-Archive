@@ -24,6 +24,13 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # uploads
 /public/uploads
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
