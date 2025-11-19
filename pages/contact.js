@@ -2,7 +2,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 /**
- * Profile 페이지 - 디자이너 프로필 및 수상내역
+ * 디자이너 프로필 페이지 컴포넌트
+ * 
+ * 디자이너 한가영의 프로필 정보, 연락처, 수상 내역을 표시하는 페이지입니다.
+ * 
+ * @returns {JSX.Element} 프로필 페이지 JSX 요소
  */
 export default function Contact() {
   return (
@@ -10,13 +14,13 @@ export default function Contact() {
       <Header />
       
       <main className="pt-24 pb-16 px-6 max-w-5xl mx-auto fade-in">
-        {/* 프로필 섹션 */}
+        {/* 프로필 섹션 - 디자이너 기본 정보 및 프로필 사진 */}
         <section className="text-center mb-16 space-y-8">
           <h1 className="text-4xl md:text-5xl font-serif text-charcoal mb-8">
             Profile
           </h1>
           
-          {/* 프로필 사진 */}
+          {/* 프로필 사진 - 원형 프레임으로 표시 */}
           <div className="flex justify-center mb-8 mt-4">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden bg-beige/30 border-4 border-beige/50">
               <img
@@ -28,7 +32,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* 기본 정보 */}
+          {/* 기본 정보 섹션 - 생년월일, 이메일, 인스타그램 등 */}
           <div className="space-y-6 text-charcoal/70 max-w-2xl mx-auto">
             <div className="space-y-4">
               <h2 className="text-2xl font-serif text-charcoal mb-6">
@@ -67,13 +71,13 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* 수상내역 */}
+        {/* 수상내역 섹션 - 연도별 수상 및 성과 기록 */}
         <section className="mb-16">
           <h2 className="text-2xl font-serif text-charcoal mb-8 text-center">
             Awards & Achievements
           </h2>
           <div className="space-y-6 max-w-3xl mx-auto">
-            {/* 2021 */}
+            {/* 2021년 수상 내역 */}
             <div className="glass rounded-lg p-6 space-y-3">
               <div className="text-sm text-charcoal/50 mb-2">2021</div>
               <ul className="space-y-2 text-charcoal/70">
@@ -114,7 +118,7 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* 포트폴리오 다운로드 */}
+        {/* 포트폴리오 다운로드 섹션 - PDF 포트폴리오 다운로드 링크 (향후 구현 예정) */}
         <section className="text-center space-y-6">
           <h2 className="text-2xl font-serif text-charcoal">
             Portfolio Download

@@ -2,7 +2,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 /**
- * 브랜드 페이지
+ * 브랜드 소개 페이지 컴포넌트
+ * 
+ * D'HAN 브랜드의 철학, 비전, 그리고 브랜드 비주얼을 소개하는 페이지입니다.
+ * 
+ * @returns {JSX.Element} 브랜드 페이지 JSX 요소
  */
 export default function Brand() {
   return (
@@ -10,7 +14,7 @@ export default function Brand() {
       <Header />
       
       <main className="pt-24 pb-16 px-6 max-w-5xl mx-auto fade-in">
-        {/* 브랜드 소개 */}
+        {/* 브랜드 소개 섹션 - 브랜드 철학과 슬로건 */}
         <section className="text-center mb-16 space-y-6">
           <h1 className="text-4xl md:text-5xl font-serif text-charcoal">
             About D'HAN
@@ -24,12 +28,13 @@ export default function Brand() {
           </p>
         </section>
 
-        {/* 브랜드 비주얼 */}
+        {/* 브랜드 비주얼 섹션 - 브랜드 아이덴티티 이미지 표시 */}
         <section className="mb-16">
           <h2 className="text-2xl font-serif text-charcoal mb-8 text-center">
             Brand Visual
           </h2>
           <div className="flex flex-col gap-8 max-w-3xl mx-auto">
+            {/* 브랜드 비주얼 이미지 배열 - 각 이미지를 순차적으로 표시 */}
             {[
               '/assets/images/brand/스크린샷 2024-12-15 17.39.08.png',
               '/assets/images/brand/스크린샷 2024-12-15 17.41.54.png',
@@ -45,7 +50,7 @@ export default function Brand() {
           </div>
         </section>
 
-        {/* 비전 */}
+        {/* 비전 섹션 - 브랜드의 미래 비전과 목표 */}
         <section className="text-center space-y-4">
           <h2 className="text-2xl font-serif text-charcoal">
             Vision

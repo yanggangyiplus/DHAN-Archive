@@ -6,13 +6,21 @@ import MediaGallery from '../../components/MediaGallery';
 import seasonsData from '../../data/seasons.json';
 
 /**
- * 시즌 페이지 (동적 라우팅)
+ * 시즌 상세 페이지 컴포넌트
+ * 
+ * 동적 라우팅을 통해 각 시즌의 상세 정보를 표시하는 페이지입니다.
+ * URL 파라미터로 전달된 시즌 ID를 기반으로 해당 시즌의 데이터를 로드합니다.
+ * 
+ * @returns {JSX.Element} 시즌 상세 페이지 JSX 요소
  */
 export default function Season() {
   const router = useRouter();
-  const { season } = router.query;
+  const { season } = router.query; // URL에서 시즌 ID 추출 (예: /2024FW)
   const [seasonData, setSeasonData] = useState(null);
 
+  /**
+   * URL 파라미터가 변경될 때마다 해당 시즌 데이터를 찾아서 상태에 저장
+   */
   useEffect(() => {
     if (season) {
       const found = seasonsData.seasons.find(s => s.id === season);
@@ -20,6 +28,7 @@ export default function Season() {
     }
   }, [season]);
 
+  // 데이터가 로드되지 않았을 때 로딩 상태 표시
   if (!seasonData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -33,7 +42,7 @@ export default function Season() {
       <Header />
       
       <main className="pt-24 pb-16 px-6 max-w-6xl mx-auto fade-in">
-        {/* 시즌 정보 */}
+        {/* 시즌 정보 헤더 섹션 - 연도, 제목, 설명 표시 */}
         <section className="text-center mb-16 space-y-4">
           <div className="text-sm text-charcoal/50 mb-2">
             {seasonData.year}
@@ -46,7 +55,7 @@ export default function Season() {
           </p>
         </section>
 
-        {/* 미디어 갤러리 */}
+        {/* 미디어 갤러리 섹션 - 시즌별 컬렉션 이미지 및 영상 표시 */}
         <section className="mb-16">
           <MediaGallery
             images={seasonData.images || []}
@@ -54,12 +63,13 @@ export default function Season() {
           />
         </section>
 
-        {/* 디자이너 노트 */}
+        {/* 디자이너 노트 섹션 - 각 시즌의 컨셉과 스토리 설명 */}
         <section className="text-center max-w-3xl mx-auto">
           <h2 className="text-2xl font-serif text-charcoal mb-6">
             Designer's Note
           </h2>
           <div className="text-charcoal/70 leading-relaxed text-left space-y-4">
+            {/* 시즌별로 다른 디자이너 노트 내용 표시 */}
             {seasonData.id === '2024FW' ? (
               <>
                 <p>
@@ -103,7 +113,7 @@ export default function Season() {
           </div>
         </section>
 
-        {/* BRAND LAUNCHING SHOW (2024 FW만) */}
+        {/* BRAND LAUNCHING SHOW 섹션 - 2024 FW 시즌에만 표시되는 런칭 쇼 콘텐츠 */}
         {seasonData.id === '2024FW' && (
           <section className="mt-16 mb-16">
             <h2 className="text-2xl font-serif text-charcoal mb-8 text-center">

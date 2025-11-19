@@ -4,10 +4,15 @@ import Footer from '../components/Footer';
 import seasonsData from '../data/seasons.json';
 
 /**
- * 홈 페이지 - 시즌별 타임라인
+ * 홈 페이지 컴포넌트
+ * 
+ * 시즌별 컬렉션을 타임라인 형식으로 표시하는 메인 페이지입니다.
+ * 브랜드 소개와 함께 연도순으로 정렬된 시즌 목록을 보여줍니다.
+ * 
+ * @returns {JSX.Element} 홈 페이지 JSX 요소
  */
 export default function Home() {
-  // 연도순으로 정렬
+  // 시즌 데이터를 연도 내림차순으로 정렬 (최신 시즌이 먼저 표시됨)
   const sortedSeasons = [...seasonsData.seasons].sort((a, b) => b.year - a.year);
 
   return (
@@ -15,7 +20,7 @@ export default function Home() {
       <Header />
       
       <main className="pt-24 pb-16 px-6 max-w-6xl mx-auto fade-in">
-        {/* 브랜드 소개 섹션 */}
+        {/* 브랜드 소개 섹션 - D'HAN의 철학과 비전 소개 */}
         <section className="text-center mb-20 space-y-4">
           <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-6">
             D'HAN Archive
@@ -29,7 +34,7 @@ export default function Home() {
           </p>
         </section>
 
-        {/* 시즌 타임라인 */}
+        {/* 시즌 타임라인 섹션 - 연도순으로 정렬된 컬렉션 목록 */}
         <section className="space-y-16">
           <h2 className="text-3xl font-serif text-center text-charcoal mb-12">
             Collections
@@ -40,9 +45,9 @@ export default function Home() {
               <div
                 key={season.id}
                 className="flex flex-col md:flex-row items-center gap-8 md:gap-12"
-                style={{ animationDelay: `${idx * 0.2}s` }}
+                style={{ animationDelay: `${idx * 0.2}s` }} // 순차적 페이드인 애니메이션을 위한 지연 시간
               >
-                {/* 이미지 */}
+                {/* 시즌 대표 이미지 - 첫 번째 이미지를 썸네일로 사용 */}
                 <div className="w-full md:w-1/2">
                   <Link href={`/${season.id}`} className="block group">
                     <div className="relative overflow-hidden rounded-lg bg-beige/30 flex items-center justify-center">
@@ -57,7 +62,7 @@ export default function Home() {
                   </Link>
                 </div>
 
-                {/* 텍스트 정보 */}
+                {/* 시즌 정보 텍스트 영역 - 제목, 설명, 링크 */}
                 <div className="w-full md:w-1/2 space-y-4">
                   <div className="text-sm text-charcoal/50 mb-2">
                     {season.year}

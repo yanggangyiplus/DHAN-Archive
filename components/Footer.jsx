@@ -1,5 +1,10 @@
 /**
  * 푸터 컴포넌트
+ * 
+ * 모든 페이지 하단에 표시되는 공통 푸터입니다.
+ * 저작권 정보를 표시합니다.
+ * 
+ * @returns {JSX.Element} 푸터 JSX 요소
  */
 export default function Footer() {
   return (
@@ -8,4 +13,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 
