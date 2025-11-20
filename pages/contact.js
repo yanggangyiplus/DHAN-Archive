@@ -1,5 +1,5 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../src/components/Header';
+import Footer from '../src/components/Footer';
 
 /**
  * 디자이너 프로필 페이지 컴포넌트

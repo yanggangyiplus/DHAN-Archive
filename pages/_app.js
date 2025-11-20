@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../src/styles/globals.css';
 
 /**
  * Next.js App 루트 컴포넌트
